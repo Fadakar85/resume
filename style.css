@@ -8,8 +8,8 @@ body{
 }
 @font-face {
     font-family: 'vazir100';
-    src: url('Vazirmatn-Thin.woff2') format('woff2'),
-    url('Vazirmatn-Thin.ttf') format('truetype');
+    src: url('fonts/webfonts/Vazirmatn-Thin.woff2') format('woff2'),
+    url('fonts/ttf/Vazirmatn-Thin.ttf') format('truetype');
     font-weight: 100;
     font-style: normal;
     font-display: swap;
@@ -17,8 +17,8 @@ body{
   
   @font-face {
     font-family: 'vazir200';
-    src: url('Vazirmatn-ExtraLight.woff2') format('woff2'),
-    url('Vazirmatn-ExtraLight.ttf') format('truetype');
+    src: url('fonts/webfonts/Vazirmatn-ExtraLight.woff2') format('woff2'),
+    url('fonts/ttf/Vazirmatn-ExtraLight.ttf') format('truetype');
     font-weight: 200;
     font-style: normal;
     font-display: swap;
@@ -26,8 +26,8 @@ body{
   
   @font-face {
     font-family: 'vazir300';
-    src: url('Vazirmatn-Light.woff2') format('woff2'),
-    url('Vazirmatn-Light.ttf') format('true');
+    src: url('fonts/webfonts/Vazirmatn-Light.woff2') format('woff2'),
+    url('fonts/ttf/Vazirmatn-Light.ttf') format('true');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -35,8 +35,8 @@ body{
   
   @font-face {
     font-family: 'vazir400';
-    src: url('Vazirmatn-Regular.woff2') format('woff2'),
-    url('Vazirmatn-Regular.ttf') format('truetype');
+    src: url('fonts/webfonts/Vazirmatn-Regular.woff2') format('woff2'),
+    url('fonts/ttf/Vazirmatn-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -44,8 +44,8 @@ body{
   
   @font-face {
     font-family: 'vazir500';
-    src: url('Vazirmatn-Medium.woff2') format('woff2'),
-    url('Vazirmatn-Medium.ttf') format('truetype');
+    src: url('fonts/webfonts/Vazirmatn-Medium.woff2') format('woff2'),
+    url('fonts/ttf/Vazirmatn-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -53,8 +53,8 @@ body{
   
   @font-face {
     font-family: 'vazir600';
-    src: url('Vazirmatn-SemiBold.woff2') format('woff2'),
-    url('Vazirmatn-SemiBold.ttf') format('truetype');
+    src: url('fonts/webfonts/Vazirmatn-SemiBold.woff2') format('woff2'),
+    url('fonts/ttf/Vazirmatn-SemiBold.ttf') format('truetype');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -62,8 +62,8 @@ body{
   
   @font-face {
     font-family: 'vazir700';
-    src: url('Vazirmatn-Bold.woff2') format('woff2'),
-    url('Vazirmatn-Bold.ttf') format('truetype');
+    src: url('fonts/webfonts/Vazirmatn-Bold.woff2') format('woff2'),
+    url('fonts/ttf/Vazirmatn-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -71,8 +71,8 @@ body{
   
   @font-face {
     font-family: 'vazir800';
-    src: url('Vazirmatn-ExtraBold.woff2') format('woff2'),
-    url('Vazirmatn-ExtraBold.ttf') format('truetype');
+    src: url('fonts/webfonts/Vazirmatn-ExtraBold.woff2') format('woff2'),
+    url('fonts/ttf/Vazirmatn-ExtraBold.ttf') format('truetype');
     font-weight: 800;
     font-style: normal;
     font-display: swap;
@@ -80,8 +80,8 @@ body{
   
   @font-face {
     font-family: 'vazir900';
-    src: url('Vazirmatn-Black.woff2') format('woff2'),
-    url('Vazirmatn-Black.ttf') format('truetype');
+    src: url('fonts/webfonts/Vazirmatn-Black.woff2') format('woff2'),
+    url('fonts/ttf/Vazirmatn-Black.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
@@ -306,9 +306,7 @@ body{
   scale: 0;
 }
 
-.home{
-  height: 30rem;
-}
+
 
 .header-tabs2{
   font-size: 1em;
@@ -381,10 +379,28 @@ body{
   .neveshteh{
     text-align: center;
   }
+  .writer-type{
+    text-align: center;
+  }
+  .photo{
+    display: none;
+  }
+  .lister{
+    scale: 0;
+    display: none;
+  }
 }
 @media screen and (max-width: 700px) {
+  .site-header{
+    height: 4rem;
+  }
   .header-text{
-    width: 100%;
+    scale: 0;
+    display: none;
+  }
+  .lister{
+    scale: 1;
+    display: block;
   }
   .home{
     height: 30rem;
@@ -408,6 +424,9 @@ body{
   .lister{
     scale: 1;
     display: block;
+  }
+  .nmkar{
+    margin-top: 18rem;
   }
   .home{
     height: 30rem;
