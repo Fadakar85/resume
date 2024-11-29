@@ -13,8 +13,8 @@
 </head>
 <body id="bodys" class="bg-darker">
     <header class="site-header w-100 d-flex justify-content-between pt-2 sticky-top">
-        <i class="bi lister bi-list-nested btn fs-2 ms-2 mb-1 d-lg-none" id="listerer" onclick="openNav()"></i>
-        <ul class="header-text justify-content-center mb-0 position-relative">
+        <i class="bi lister bi-list-nested d-lg-none d-md-block d-sm-block btn fs-2 ms-2 mb-1" id="listerer" onclick="openNav()"></i>
+        <ul class="header-text d-lg-flex d-md-none d-sm-none justify-content-center mb-0 ms-0 position-relative">
                 <li class="header-tabs pe-4 ps-4 m-0 text-center font-300 position-relative" tabindex="0" id="home-link">
                     <i class="bi txt-lighter fs-4 fa-solid bi-house-door"></i>
                     <div class="circle"></div>
@@ -48,24 +48,23 @@
     <div class="navbarer fixed-top p-0" tabindex="0" id="naver">
         <i class="bi closer bi-x fs-1 txt-lighter btn" tabindex="0" id="closerer" onclick="closing()"></i>
         <ul class="opener-nav p-0 m-0" id="navOpenerList">
-            <li class="header-tabs1 pt-2 pb-2 ps-2 txt-lighter font-200" tabindex="0">خانه</li>
-            <li class="header-tabs1 pt-2 pb-2 ps-2 txt-lighter font-200" tabindex="0">نمونه کارها</li>
-            <li class="header-tabs1 pt-2 pb-2 ps-2 txt-lighter font-200" tabindex="0">درباره من</li>
-            <li class="header-tabs1 pt-2 pb-2 ps-2 txt-lighter font-200" tabindex="0">تحصیلات</li>
-            <li class="header-tabs1 pt-2 pb-2 ps-2 txt-lighter font-200" tabindex="0">تماس با من</li>
-            <span class="spaner2 bg-lighter"></span>
+            <li class="header-tabs1 header-tabs pt-2 pb-2 ps-2 txt-lighter font-200" tabindex="0" id="home-link1">خانه</li>
+            <li class="header-tabs1 header-tabs pt-2 pb-2 ps-2 txt-lighter font-200" tabindex="0" id="portfolio-link1">نمونه کارها</li>
+            <li class="header-tabs1 header-tabs pt-2 pb-2 ps-2 txt-lighter font-200" tabindex="0" id="aboutMe-link1">درباره من</li>
+            <li class="header-tabs1 header-tabs pt-2 pb-2 ps-2 txt-lighter font-200" tabindex="0" id="educate-link1">تحصیلات</li>
+            <li class="header-tabs1 header-tabs pt-2 pb-2 ps-2 txt-lighter font-200" tabindex="0" >تماس با من</li>
         </ul>
     </div>
 
     
 
-    <section class="home placer w-100 d-flex justify-content-between" id="home">
-        <div class="neveshteh">
+    <section class="home placer w-100 d-flex flex-lg-wrap flex-md-wrap flex-sm-wrap justify-content-between" id="home">
+        <div class="neveshteh text-lg-center text-md-center text-sm-center">
             <div class="write-div ms-3">
                 <h1 class="salam font-600 txt-lighterd-inline-block font-sizer">سلام ،من</h1>
                 <h1 class="erfan d-inline-block ms-1 font-sizer">سید عرفان</h1>
                 <h1 class="d-inline-block salam ms-1 font-sizer">هستم.</h1>
-                <div class="writer-type">
+                <div class="writer-type text-lg-center">
                     <h1 class="typing-container font-500 txt-lighter ms-3 mt-4 fs-2" id="typing"></h1>
                 </div>
                 <p class="font-100 txt-lighter mt-4 pe-5">
@@ -76,16 +75,16 @@
             <div class="majazi">
                 <p class="txt-lighter font-200 ms-3">من در:</p>
                 <div class="iconer mt-5">
-                    <i class="bi bi-instagram fs-3 txt-lighter pt-3 pb-2 header-tabs header-tabs2 text-center font-300 position-relative"></i>
-                    <i class="bi bi-whatsapp fs-3 txt-lighter pt-3 pb-2 header-tabs header-tabs2 text-center font-300 position-relative"></i>
-                    <i class="bi bi-twitter fs-3 txt-lighter pt-3 pb-2 header-tabs header-tabs2 text-center font-300 position-relative"></i>
-                    <i class="bi bi-github fs-3 txt-lighter pt-3 pb-2 header-tabs header-tabs2 text-center font-300 position-relative"></i>
+                    <i class="bi bi-instagram fs-3 txt-lighter pt-3 pb-2 header-tabs header-tabs2 m-lg-2 m-md-3 text-center font-300 position-relative"></i>
+                    <i class="bi bi-whatsapp fs-3 txt-lighter pt-3 pb-2 header-tabs header-tabs2 m-lg-2 m-md-3 text-center font-300 position-relative"></i>
+                    <i class="bi bi-twitter fs-3 txt-lighter pt-3 pb-2 header-tabs header-tabs2 m-lg-2 m-md-3 text-center font-300 position-relative"></i>
+                    <i class="bi bi-github fs-3 txt-lighter pt-3 pb-2 header-tabs header-tabs2 m-lg-2 m-md-3 text-center font-300 position-relative"></i>
                 </div>
             </div>
         </div>
         
         <div class="mt-5 me-5">
-            <img src="banner-01.png" alt="" class="photo m-auto">
+            <img src="banner-01.png" alt="" class="photo m-auto d-md-none d-sm-none">
         </div>
     </section>
 
@@ -160,6 +159,51 @@
             moveUnderLine(lastActiveItem);
         });
     </script>
+
+
+
+<script>
+    const navItems1 = document.querySelectorAll('.header-tabs1');
+    let lastActiveItem1 = navItems[0];
+
+    function activateSection() {
+        let currentSection = null;
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            if (window.scrollY >= sectionTop - 50 && window.scrollY < sectionTop + sectionHeight - 50) {
+                currentSection = section.getAttribute("id");
+            }
+        });
+        navItems1.forEach(item => {
+            const targetId = item.id.replace("-link1", "");
+        });
+
+        if (currentSection) {
+            navItems1.forEach(item => {
+                const targetId = item.id.replace("-link1", "");
+                if (targetId === currentSection) {
+                    lastActiveItem1 = item;
+                }
+            });
+        }
+    }
+
+    navItems1.forEach(item => {
+        item.addEventListener("click", () => {
+            const targetId = item.id.replace("-link1", "");
+            const targetSection = document.getElementById(targetId);
+
+            window.scrollTo({
+                top: targetSection.offsetTop,
+                behavior: "smooth"
+            });
+            lastActiveItem1 = item;
+        });
+    });
+
+    window.addEventListener("scroll", activateSection);
+</script>
 
     <script>
         const list = document.getElementById('listerer');
