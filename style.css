@@ -98,7 +98,7 @@ body{
 :root{
     --black-color: #1c1c1E;
     --dark-green: #3A3A3C;
-    --light-green: #39FFFF;
+    --light-green: #9B1B30;
     --light-white: #FFFFFF;
 }
 
@@ -242,7 +242,7 @@ body{
   width: 10%;
   height: 5vh;
   border-radius: 50px;
-  top: 5%;
+  top: 1%;
   left: 77.5%;
   position: absolute;
   transition: all 0.5s ease;
@@ -260,19 +260,19 @@ body{
 }
 
 .opener-nav :nth-child(1):focus~.spaner2{
-  top: 5%;
+  top: 1%;
 }
 .opener-nav :nth-child(2):focus~.spaner2{
-  top: 25%;
+  top: 21%;
 }
 .opener-nav :nth-child(3):focus~.spaner2{
-  top: 44%;
+  top: 42%;
 }
 .opener-nav :nth-child(4):focus~.spaner2{
-  top: 65%;
+  top: 62%;
 }
 .opener-nav :nth-child(5):focus~.spaner2{
-  top: 85%;
+  top: 82%;
 }
 
 
@@ -332,15 +332,29 @@ body{
 
 .iconer :nth-child(1):hover{
   color: #cb14d1;
+  text-shadow: 0 0 50px #cb14d1,
+  0 0 100px #cb14d1,
+  0 0 150px #cb14d1,
+  0 0 200px #cb14d1;
 }
 .iconer :nth-child(2):hover{
   color: #25d366;
+  text-shadow: 0 0 50px #25d366,
+  0 0 100px #25d366,
+  0 0 150px #25d366,
+  0 0 200px #25d366;
 }
 .iconer :nth-child(3):hover{
   color: #1da1f2;
+  text-shadow: 0 0 50px #1da1f2,
+  0 0 100px #1da1f2,
+  0 0 150px #1da1f2,
+  0 0 200px #1da1f2;
 }
 .iconer :nth-child(4):hover{
   color: #181717;
+  text-shadow: 0 0 20px var(--light-white);
+  
 }
 
 .opener-nav{
@@ -361,82 +375,14 @@ body{
 
 .nmkar{
   margin-top: 10rem;
+  margin-bottom: 20rem;
   width: 100%;
   text-align: center;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 992px) {
   .header-text{
     width: 75%;
-  }
-  .home{
-    height: 30rem;
-    flex-wrap: wrap;
-  }
-  .header-tabs2{
-    margin: 1rem;
-  }
-  .neveshteh{
-    text-align: center;
-  }
-  .writer-type{
-    text-align: center;
-  }
-  .photo{
-    display: none;
-  }
-  .lister{
-    scale: 0;
-    display: none;
-  }
-}
-@media screen and (max-width: 700px) {
-  .site-header{
-    height: 4rem;
-  }
-  .header-text{
-    scale: 0;
-    display: none;
-  }
-  .lister{
-    scale: 1;
-    display: block;
-  }
-  .home{
-    height: 30rem;
-    flex-wrap: wrap;
-  }
-  .header-tabs2{
-    margin: 1rem;
-  }
-  .neveshteh{
-    text-align: center;
-  }
-}
-@media screen and (max-width: 600px) {
-  .site-header{
-    height: 4rem;
-  }
-  .header-text{
-    scale: 0;
-    display: none;
-  }
-  .lister{
-    scale: 1;
-    display: block;
-  }
-  .nmkar{
-    margin-top: 18rem;
-  }
-  .home{
-    height: 30rem;
-    flex-wrap: wrap;
-  }
-  .header-tabs2{
-    margin: 1rem;
-  }
-  .neveshteh{
-    text-align: center;
   }
 }
 
