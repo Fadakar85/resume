@@ -380,10 +380,19 @@ body{
   text-align: center;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 2000px) {
+  .site-header{
+    padding: 0;
+  }
+  .fnt-siz{
+    font-size: 1rem;
+  }
   .header-text{
     width: 75%;
   }
+}
+
+@media (max-width: 992px) {
   .headering{
     font-size: 4.5rem;
   }
@@ -406,7 +415,7 @@ body{
     margin: 0;
     font-size: 2rem;
   }
-    .header-tabs1{
+  .header-tabs1{
     font-size: 2rem;
   }
   .header-tabs2{
