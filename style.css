@@ -459,6 +459,10 @@ body{
   transition: all .25s ease;
 }
 
+.profwrite1{
+  font-size: 1.5rem;
+}
+
 @media (max-width: 2000px) {
   .site-header{
     padding: 0;
@@ -502,6 +506,15 @@ body{
   }
   .header-tabs2{
     font-size: 4rem;
+  }
+  .profwrite{
+    font-size: 2.5rem;
+  }
+  .waching{
+    font-size: 2rem;
+  }
+  .menupr{
+    font-size: 1.5rem;
   }
 }
 
