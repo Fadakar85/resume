@@ -463,6 +463,10 @@ body{
   font-size: 1.5rem;
 }
 
+.waching1{
+  font-size: 30px;
+}
+
 @media (max-width: 2000px) {
   .site-header{
     padding: 0;
