@@ -460,7 +460,7 @@ body{
 }
 
 .profwrite1{
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .waching1{
@@ -513,6 +513,9 @@ body{
   }
   .profwrite{
     font-size: 2.5rem;
+  }
+  .profwrite1{
+    font-size: 1.5rem;
   }
   .waching{
     font-size: 2rem;
