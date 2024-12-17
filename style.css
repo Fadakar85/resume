@@ -139,7 +139,6 @@ body{
 }
 
 .site-header{
-    background-color: var(--black-color);
     box-shadow: 
       0 0 15px var(--black-color),
       0 0 30px var(--light-green),
@@ -152,9 +151,7 @@ body{
   width: 50%;
   list-style: none;
   z-index: 1000;
-  background-color: var(--black-color);
   display: flex;
-  backdrop-filter: blur(15px);
 }
 
 .blur{
@@ -175,10 +172,32 @@ body{
   margin: 0;
   z-index: 100;
 }
+.header-tabs::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(143, 143, 143, 0.3), transparent 70%);
+  mix-blend-mode: multiply;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.header-tabs:hover::after{
+  opacity: 1;
+}
+.header-tabs{
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+}
 .header-tabs:hover{
   scale: 1.1;
   backdrop-filter: blur(5px);
   z-index: 200;
+  
+  border-radius: 5px;
 }
 
 .write-div{
@@ -224,7 +243,19 @@ body{
 }
 
 .spaner{
-  width: 9%;
+  border-radius: 50px;
+  bottom: 0;
+  position: absolute;
+  transition: all 0.5s ease;
+  z-index: -3;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(#991d1da6, transparent 70%);
+  mix-blend-mode: multiply;
+}
+
+.spaner1{
   height: 10px;
   border-radius: 50px;
   bottom: 0;
@@ -375,7 +406,7 @@ body{
 
 .nmkar{
   padding-top: 10rem;
-  margin-bottom: 20rem;
+  margin-bottom: 1rem;
   width: 100%;
   text-align: center;
 }
@@ -424,6 +455,7 @@ body{
 }
 .profmenu{
   list-style: none;
+
 }
 .overaly{
   position: absolute;
@@ -459,6 +491,10 @@ body{
   transition: all .25s ease;
 }
 
+.profwrite{
+  font-size: 1.5rem;
+}
+
 .profwrite1{
   font-size: 1rem;
 }
@@ -467,7 +503,7 @@ body{
   font-size: 30px;
 }
 
-@media (max-width: 2000px) {
+@media only screen and (max-width: 2000px) {
   .site-header{
     padding: 0;
   }
@@ -482,7 +518,7 @@ body{
   }
 }
 
-@media (max-width: 992px) {
+@media only screen and (max-width: 992px) {
   .headering{
     font-size: 4.5rem;
   }
@@ -526,6 +562,75 @@ body{
   .menupr{
     font-size: 1.5rem;
   }
+}
+
+@media only screen and (max-width: 750px) {
+  .headering{
+    font-size: 4.5rem;
+  }
+  .lister{
+    font-size: 4rem;
+    color: var(--light-white);
+  }
+  .font-sm-big{
+    font-size: 8rem;
+  }
+  .salam{
+    font-size: 4rem;
+  }
+  .erfan{font-size: 4rem;}
+  .writer-type{margin-top: 2rem;}
+  .typing-container{
+    width: 50%;
+    font-size: 10rem;
+  }
+  .tozih{
+    width: 100%;
+    margin: 0;
+    font-size: 2rem;
+  }
+  .header-tabs1{
+    font-size: 2rem;
+  }
+  .header-tabs2{
+    font-size: 2rem;
+  }
+  .profwrite{
+    font-size: 2.5rem;
+  }
+  .profwrite1{
+    font-size: 1.5rem;
+  }
+  .waching{
+    font-size: 2rem;
+  }
+  .waching1{
+    font-size: 50px;
+  }
+  .menupr{
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .header-tabs2{
+    font-size: 2rem;
+    margin: 0 20px;
+  }
+}
+@media only screen and (max-width: 580px) {
+  .site-header{width: 100%;}
+  .header-text{display: none;}
+  .home{flex-wrap: wrap;}
+  .neveshteh{text-align: center;}
+  .writer-type{text-align: center;}
+  .typing-container{margin: auto;}
+  .header-tabs2{font-size: 1rem;}
+  .photo{display: none;}
+  #portfolionmkar{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .headering{font-size: 3rem;}
 }
 
 .typing-container{
