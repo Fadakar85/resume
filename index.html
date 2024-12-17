@@ -12,32 +12,27 @@
     <title>Document</title>
 </head>
 <body id="bodys" class="bg-darker">
-    <header class="site-header w-100 d-flex justify-content-between pt-2 sticky-top">
+    <header class="site-header bg-darker w-100 d-flex justify-content-between pt-2 sticky-top" id="myHeader">
         <i class="bi lister bi-list-nested d-lg-none d-md-block d-sm-block ms-3 mb-2" id="listerer" onclick="openNav()"></i>
         <ul class="header-text d-lg-flex d-md-none d-sm-none justify-content-start mb-0 ms-0 position-relative">
                 <li class="header-tabs pe-4 ps-4 m-0 text-center font-300 position-relative" tabindex="0" id="home-link">
                     <i class="bi txt-lighter fs-4 fa-solid bi-house-door fnt-siz"></i>
-                    <div class="circle"></div>
                     <p class="header-name txt-lighter fnt-siz1">خانه</p>
                 </li>
                 <li class="header-tabs pe-4 ps-4 m-0 text-center font-300 position-relative" tabindex="0" id="portfolio-link">
                     <i class="bi txt-lighter fs-4 fa-solid bi-laptop fnt-siz"></i>
-                    <div class="circle"></div>
                     <p class="header-name txt-lighter fnt-siz1">نمونه کار ها</p>
                 </li>
                 <li class="header-tabs pe-4 ps-4 m-0 text-center font-300 position-relative" tabindex="0" id="aboutMe-link">
                     <i class="bi txt-lighter fs-4 fa-solid bi-person fnt-siz"></i>
-                    <div class="circle"></div>
                     <p class="header-name txt-lighter fnt-siz1">درباره من</p>
                 </li>
                 <li class="header-tabs pe-4 ps-4 m-0 text-center font-300 position-relative" tabindex="0" id="educate-link">
                     <i class="bi txt-lighter fs-4 fa-solid bi-book-half fnt-siz"></i>
-                    <div class="circle"></div>
                     <p class="header-name txt-lighter fnt-siz1">تحصیلات</p>
                 </li>
                 <li class="header-tabs pe-4 ps-4 m-0 text-center font-300 position-relative" tabindex="0">
                     <i class="bi txt-lighter fs-4 fa-solid bi-telephone fnt-siz"></i>
-                    <div class="circle"></div>
                     <p class="header-name txt-lighter fnt-siz1">تماس با من</p>
                 </li>
             <span class="spaner bg-lighter" id="underline"></span>
@@ -75,10 +70,10 @@
             <div class="majazi">
                 <p class="txt-lighter font-200 ms-3 fs-3">من در:</p>
                 <div class="iconer mt-5 d-flex justify-content-center">
-                    <i class="bi bi-instagram txt-lighter pt-3 pb-2 header-tabs header-tabs2 m-lg-2 m-md-3 text-center font-300 position-relative"></i>
-                    <i class="bi bi-whatsapp txt-lighter pt-3 pb-2 header-tabs header-tabs2 m-lg-2 m-md-3 text-center font-300 position-relative"></i>
-                    <i class="bi bi-twitter txt-lighter pt-3 pb-2 header-tabs header-tabs2 m-lg-2 m-md-3 text-center font-300 position-relative"></i>
-                    <i class="bi bi-github txt-lighter pt-3 pb-2 header-tabs header-tabs2 m-lg-2 m-md-3 text-center font-300 position-relative"></i>
+                    <i class="bi bi-instagram txt-lighter pt-3 pb-2 header-tabs2 m-lg-2 m-md-3 text-center font-300 position-relative"></i>
+                    <i class="bi bi-whatsapp txt-lighter pt-3 pb-2 header-tabs2 m-lg-2 m-md-3 text-center font-300 position-relative"></i>
+                    <i class="bi bi-twitter txt-lighter pt-3 pb-2 header-tabs2 m-lg-2 m-md-3 text-center font-300 position-relative"></i>
+                    <i class="bi bi-github txt-lighter pt-3 pb-2 header-tabs2 m-lg-2 m-md-3 text-center font-300 position-relative"></i>
                 </div>
             </div>
         </div>
@@ -199,6 +194,22 @@
 
     <section class="nmkar placer" id="aboutMe">
         <h2 class="txt-lighter font-400">درباره من</h2>
+        <div class="d-flex justify-content-center">
+            <ul class="header-text row position-relative p-0">
+                <li class="header-tabs col pe-4 pb-4 pt-3 ps-4 m-0 text-center font-300 d-flex justify-content-center align-items-center position-relative" tabindex="0">
+                    <h4 class="font-400 txt-lighter">مهارت های من</h4>
+                </li>
+
+                <li class="header-tabs col pe-4 pb-4 pt-3 ps-4 m-0 text-center font-300 d-flex justify-content-center align-items-center position-relative" tabindex="0">
+                    <h4 class="font-400 txt-lighter">سوابق شغلی</h4>
+                </li>
+
+                <li class="header-tabs col pe-4 pb-4 pt-3 ps-4 m-0 text-center font-300 d-flex justify-content-center align-items-center position-relative" tabindex="0">
+                    <h4 class="font-400 txt-lighter">نظرات</h4>
+                </li>
+                <span class="spaner1 bg-lighter p-0 w-100"></span>
+            </ul>
+        </div>
     </section>
 
     <section class="nmkar placer" id="educate">
@@ -207,7 +218,21 @@
 
 
 
-
+    <script>
+        const myHeader = document.getElementById('myHeader');
+        const scrollThreshold = 30;
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+            if (scrollPosition > scrollThreshold) {
+                myHeader.classList.remove('bg-darker');
+                myHeader.style.backdropFilter = "blur(15px)";
+            }
+            else {
+                myHeader.style.backdropFilter = "blur(0)";
+                myHeader.classList.add('bg-darker');
+            }
+        })
+    </script>
 
     <script>
         const portfolionmkar = document.getElementById('portfolionmkar');
@@ -284,7 +309,17 @@
         
     </script>
 
-
+    <script>
+        document.querySelectorAll(".header-tabs").forEach((element) => {
+            element.addEventListener('mousemove', (e) => {
+                const rect = element.getBoundingClientRect();
+                const x = ((e.clientX - rect.left) / rect.width) * 100;
+                const y = ((e.clientY - rect.top) / rect.height) * 100;
+                element.style.setProperty('--mouse-x', `${x}%`);
+                element.style.setProperty('--mouse-y', `${y}%`);
+            });
+        });
+    </script>
 
 
 
