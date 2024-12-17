@@ -643,8 +643,8 @@ body{
 }
 @media only screen and (max-width: 370px) {
     .site-header{width: 100%;}
-    .salam{font-size: 2rem;}
-    .erfan{font-size: 2rem;}
+    .salam{font-size: 1rem;}
+    .erfan{font-size: 1rem;}
   .header-tabs2{
     font-size: 1rem;
     margin: 0 10px;
