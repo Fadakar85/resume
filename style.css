@@ -633,6 +633,7 @@ body{
   .headering{font-size: 3rem;}
 }
 @media only screen and (max-width: 450px) {
+    .site-header{width: 100%;}
   .header-tabs2{
     font-size: 1rem;
     margin: 0 10px;
