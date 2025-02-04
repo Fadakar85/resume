@@ -105,8 +105,8 @@ body{
 .txt-light-green{color: var(--light-green);}
 .bg-light-green{background-color: var(--light-green);}
 
-.txt-reder{color: var(light-green);}
-.bg-reder{background-color: var(light-green);}
+.txt-reder{color: var(--light-green);}
+.bg-reder{background-color: var(--light-green);}
 
 .txt-lighter{color: var(--light-white);}
 .bg-lighter{background-color: var(--light-white);}
@@ -667,6 +667,115 @@ body{
   0 0 10px var(--black-color);
 }
 
+.tamas{width: 50%;}
+.tamas-tozih{
+  width: 90%;
+  height: 23rem;
+  overflow: visible;
+  border-radius: 10px;
+  box-shadow: 0 0 15px var(--light-white);
+} .tamas-tozih:hover{scale: 1;}
+.tamas-img{
+  width: 75%;
+  transition: transform 0.1s ease-out, box-shadow 0.1s ease-out;
+  transform-style: preserve-3d;
+  perspective: 20px;
+  box-shadow: 0 10px 15px var(--light-green);
+  top: -30%;
+  left: 2.5%;
+  z-index: 200;
+  border-radius: 1rem;
+}
+
+
+
+.contact-section h2 {
+  color: var(--light-white);
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.contact-form .form-group {
+  margin-bottom: 15px;
+}
+
+.contact-form label {
+  font-size: 1.1rem;
+  margin-bottom: .7rem;
+  color: var(--light-white);
+}
+
+.form-group{position: relative;}
+.placeholding{
+  position: absolute;
+  top: 57.5%;
+  right: 2%;
+  z-index: 500;
+}
+.inputs {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid var(--dark-green);
+  border-radius: 8px;
+  font-size: 1rem;
+  color: var(--light-white);
+  background-color: var(--dark-green);
+  transition: all .3s ease;
+  overflow: visible;
+}
+
+.inputs::placeholder{
+  transition: all .4s ease;
+  z-index: 500;
+}
+
+.inputs:focus::placeholder{
+  transform: translate(0, -40px);
+}
+
+.inputs:focus {
+  outline: none;
+}
+
+.contact-form textarea {
+  height: 150px;
+  resize: none;
+}
+
+.submit-btn {
+  background-color: var(--light-green);
+  color: var(--light-white);
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: var(--dark-green);
+}
+
+.submit-btn:active {
+  transform: scale(0.95);
+}
+
+.contact-form input,
+.contact-form textarea {
+  transition: box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  box-shadow: 0 0 15px var(--light-green);
+}
+
 @media only screen and (max-width: 2000px) {
   .site-header{
     padding: 0;
@@ -782,6 +891,10 @@ body{
   .span2{top: 96%; right: -5%;}
   .span3{top: 93%; right: -5%;}
   .span4{top: 93%; right: -5%;}
+  .tamas{width: 100%;}
+  .contact-form{width: 100%;}
+  .tamas-img{top: -35%;}
+  .tamaser{flex-wrap: wrap;}
 }
 @media only screen and (max-width: 750px) {
   .headering{
@@ -858,6 +971,12 @@ body{
   .mizan{width: 100%;}
   .tozih{font-size: 1.5rem;}
   .aboutme{font-size: 1.5rem;}
+  .tamas-img{
+    width: 12rem;
+    height: 12rem;
+  }
+}
+@media only screen and (max-width: 575px) {
 }
 @media only screen and (max-width: 450px) {
   .header-tabs2{
@@ -869,6 +988,14 @@ body{
   }
   .profwrite{font-size: 1.5rem;}
   .saynmkar{font-size: 1rem;}
+  .tamas{width: 100%;}
+  .contact-form{width: 100%;}
+  .tamas-img{top: -35%;}
+}
+@media only screen and (max-width: 450px) {
+  .erfan{font-size: 2.5rem;}
+  .salam{font-size: 2.5rem;}
+  .tozih{font-size: 1rem;}
 }
 
 .typing-container{
