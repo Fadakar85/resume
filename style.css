@@ -676,7 +676,7 @@ body{
   box-shadow: 0 0 15px var(--light-white);
 } .tamas-tozih:hover{scale: 1;}
 .tamas-img{
-  width: 75%;
+  width: 20rem;
   transition: transform 0.1s ease-out, box-shadow 0.1s ease-out;
   transform-style: preserve-3d;
   perspective: 20px;
@@ -789,8 +789,63 @@ body{
   .header-text{
     width: 75%;
   }
+  .saynmkar{
+    font-size: 1.1rem;
+  }
+  .fosi-4{
+    font-size: 2.2rem;
+  }
+  .tozih{
+    width: 50%;
+  }
+  .carousel-control-prev{
+    margin-right: 26rem;
+    }
+  .carousel-control-next{
+    margin-left: 40rem;
+    }
+    .educate-tozih{
+        font-size: 2rem;
+    }
+    .tamas-txt{
+        font-size: 1.5rem;
+    }
 }
-
+@media only screen and (max-width: 1500px) {
+    .carousel-control-prev{
+        margin-right: 20rem;
+        height: 10%;
+      }
+      .carousel-control-next{
+        margin-left: 33.55rem;
+        height: 10%;
+      }
+      .tamas-txt{
+        font-size: 1rem;
+      }
+      .tozih{
+        width: 75%;
+      }
+}
+@media only screen and (max-width: 1200px) {
+    .saynmkar{
+        font-size: .8rem;
+    }
+    .fosi-4 {
+        font-size: 1.5rem;
+    }
+    .carousel-control-prev{
+        margin-right: 15rem;
+        height: 10%;
+      }
+      .carousel-control-next{
+        margin-left: 27rem;
+        height: 10%;
+      }
+      .educate-tozih{
+        font-size: 1rem;
+      }
+}
 @media only screen and (max-width: 992px) {
   .headering{
     font-size: 4.5rem;
@@ -863,6 +918,13 @@ body{
   .carousel-control-next{
     margin-left: 2rem;
     height: 10%;
+  }
+  .tozih{
+    text-align: center;
+    margin: auto;
+  }
+  .photo{
+    width: 35rem;
   }
 }
 @media only screen and (max-width: 850px) {
